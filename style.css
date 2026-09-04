@@ -1,0 +1,131 @@
+:root {
+  --bg: #faf8f3;
+  --text: #1b1a17;
+  --muted: #6b6660;
+  --border: #e4e0d6;
+  --accent: #7a3b12;
+  --accent-bg: #f1e9dc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16150f;
+    --text: #ece8de;
+    --muted: #9c968a;
+    --border: #322f26;
+    --accent: #e2a874;
+    --accent-bg: #241f16;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+h1, h2 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.top {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 1.5rem;
+}
+
+.kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1 { font-size: 2rem; }
+
+.lede {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 46ch;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+}
+
+section + section { margin-top: 2.5rem; }
+
+h2 {
+  font-size: 1.15rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li { border-bottom: 1px solid var(--border); }
+.list li:first-child { border-top: 1px solid var(--border); }
+
+.list a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.95rem 0.15rem;
+  text-decoration: none;
+  color: var(--text);
+  min-height: 44px;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.list a:active { background: var(--accent-bg); }
+
+@media (hover: hover) {
+  .list a:hover .name { color: var(--accent); }
+}
+
+.name {
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.name::after {
+  content: "→";
+  display: inline-block;
+  margin-left: 0.4em;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+footer {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+footer p { margin: 0; }
