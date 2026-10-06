@@ -1,7 +1,5 @@
-# Proyectos — índice
+# Portal
 
-Página única con enlaces a todos los proyectos: juegos y retos diarios para móvil, y herramientas de proyección financiera y de datos.
+Índice de todas las webs y juegos: https://adrianezd.github.io/portal/
 
-Live: https://adrianezd.github.io/portal/ (puede tardar uno o dos minutos en estar disponible tras el primer despliegue)
-
-Sitio estático (HTML/CSS puro, sin dependencias ni build), pensado para móvil.
+`index.html` lo genera `../.herramientas/portal.js` (`node portal.js`): para añadir una web, se añade una línea a la lista y se vuelve a ejecutar.
